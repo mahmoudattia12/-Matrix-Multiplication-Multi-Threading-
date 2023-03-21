@@ -80,18 +80,7 @@ void thread_per_matrix_method(char *outputFile){
     //use stop and start to calculate time for each method 
     struct timeval start, end;
     // multiply_per_matrix
-    pthread_t thread_per_matrix;
     gettimeofday(&start, NULL); //start checking time
-    //create the single thread
-    // if (pthread_create(&thread_per_matrix, NULL, multiply_per_matrix, NULL)){
-    //     printf("ERROR in create thread of multiply_per_matrix\n");
-    //     exit(-1);
-    // }
-    //join for the single thread
-    // if(pthread_join(thread_per_matrix, NULL)){
-    //     printf("ERROR in joining thread of multiply_per_matrix\n");
-    //     exit(-1);
-    // }
     multiply_per_matrix();
     gettimeofday(&end, NULL); //end checking time
     printf("\033[0;36mMethod: A thread per matrix\033[0m\n");
